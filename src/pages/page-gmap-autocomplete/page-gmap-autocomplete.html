@@ -1,0 +1,19 @@
+<ion-header>  
+	<ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>         
+		<ion-title>Places Autocomplete</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content>
+    <div id="map"></div>
+    <ion-list>
+        <ion-item padding>
+            <ion-input type="text" placeholder="Pick an address"
+                (click)="showModal()" 
+                [(ngModel)]="address.place">
+            </ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>

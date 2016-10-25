@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Search address</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content> 
+    <ion-searchbar 
+        [(ngModel)]="autocomplete.query" 
+        [showCancelButton]="true" 
+        (ionInput)="updateSearch()" 
+        (ionCancel)="dismiss()"
+        placeholder="Start typing and select ...">
+    </ion-searchbar>
+    <ion-list>
+        <ion-item *ngFor="let item of autocompleteItems" 
+            (click)="chooseItem(item)">
+            {{ item.description }}
+        </ion-item>
+    </ion-list>
+</ion-content>
