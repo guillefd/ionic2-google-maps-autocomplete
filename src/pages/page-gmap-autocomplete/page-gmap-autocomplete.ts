@@ -15,6 +15,8 @@ export class PageGmapAutocomplete implements OnInit {
     };
     placesService:any;
     map: any;
+    markers = [];
+    placedetails: any;
 
     constructor(public navCtrl: NavController,
         public modalCtrl: ModalController) { 
@@ -48,6 +50,19 @@ export class PageGmapAutocomplete implements OnInit {
                 // set place in map
                 self.map.setCenter(place.geometry.location);
                 self.createMapMarker(place);
+                
+                // populate 
+                self.placedetails = {
+                    fulladdress: place.formatted_address,
+                    streetnumber: place.address_components[0].short_name,
+                    streetname: place.address_components[1].long_name,
+                    area: place.address_components[2].short_name,
+                    locality: place.address_components[3].short_name,
+                    latitud: place.geometry.location.lat(),
+                    longitud: place.geometry.location.lng(),
+                    postalcode: place.address_components[7] ? place.address_components[7].short_name : 'n/d',
+                }
+                console.log('page > getPlaceDetail > details > ', self.placedetails);
             }else{
                 console.log('page > getPlaceDetail > status > ', status);
             }
@@ -67,7 +82,8 @@ export class PageGmapAutocomplete implements OnInit {
         var placeLoc = place.geometry.location;
         var marker = new google.maps.Marker({
           map: this.map,
-          position: place.geometry.location
+          position: placeLoc
         });    
+        this.markers.push(marker);
     }    
 }

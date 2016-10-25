@@ -9,11 +9,28 @@
 <ion-content>
     <div id="map"></div>
     <ion-list>
-        <ion-item padding>
+        <ion-item margin>
             <ion-input type="text" placeholder="Pick an address"
                 (click)="showModal()" 
                 [(ngModel)]="address.place">
             </ion-input>
+        </ion-item>
+        <ion-item *ngIf="placedetails">
+            <ion-icon name="pin" item-left></ion-icon>
+            <h3>Full text address</h3>
+            <p>{{ placedetails?.fulladdress }}</p>
+            <h3>Street name</h3>
+            <p>{{ placedetails?.streetname }}</p>
+            <h3>Street number</h3>
+            <p>{{ placedetails?.streetnumber }}</p>
+            <h3>Neighbourhood</h3>
+            <p>{{ placedetails?.area }}</p>
+            <h3>Postal Code</h3>
+            <p>{{ placedetails?.postalcode }}</p>    
+            <h3>City</h3>
+            <p>{{ placedetails?.locality }}</p>     
+            <h3>Location geometry</h3>
+            <p>{{ placedetails?.latitud }}, {{ placedetails?.longitud }}</p>                                           
         </ion-item>
     </ion-list>
 </ion-content>
