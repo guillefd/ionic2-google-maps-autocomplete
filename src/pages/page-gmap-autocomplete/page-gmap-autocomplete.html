@@ -18,19 +18,19 @@
         <ion-item *ngIf="placedetails">
             <ion-icon name="pin" item-left></ion-icon>
             <h3>Full text address</h3>
-            <p>{{ placedetails?.fulladdress }}</p>
+            <p>{{ placedetails?.address }}</p>
             <h3>Street name</h3>
-            <p>{{ placedetails?.streetname }}</p>
+            <p>{{ placedetails?.components.route.long }}</p>
             <h3>Street number</h3>
-            <p>{{ placedetails?.streetnumber }}</p>
+            <p>{{ placedetails?.components.street_number.long }}</p>
             <h3>Neighbourhood</h3>
-            <p>{{ placedetails?.area }}</p>
+            <p>{{ placedetails?.components.sublocality_level_1.long }}</p>
             <h3>Postal Code</h3>
-            <p>{{ placedetails?.postalcode }}</p>    
+            <p>{{ placedetails?.components.postal_code.long }}{{ placedetails?.components.postal_code_suffix.long }}</p>    
             <h3>City</h3>
-            <p>{{ placedetails?.locality }}</p>     
+            <p>{{ placedetails?.components.locality.long }}</p>     
             <h3>Location geometry</h3>
-            <p>{{ placedetails?.latitud }}, {{ placedetails?.longitud }}</p>                                           
+            <p>{{ placedetails?.lat }}, {{ placedetails?.lng }}</p>                                           
         </ion-item>
     </ion-list>
 </ion-content>

@@ -1,3 +1,4 @@
+import { VIEW_ENCAPSULATION_VALUES } from '@angular/core/src/metadata/view';
 import { Component, OnInit } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { ModalAutocompleteItems } from '../modal-autocomplete-items/modal-autocomplete-items';
@@ -42,6 +43,22 @@ export class PageGmapAutocomplete implements OnInit {
         var request = {
             placeId: place_id
         };
+        var details = {
+            address: '',
+            lat: '',
+            lng: '',
+            components: {
+                route: { set: false, short:'', long:'' },                           // calle 
+                street_number: { set: false, short:'', long:'' },                   // numero
+                sublocality_level_1: { set: false, short:'', long:'' },             // barrio
+                locality: { set: false, short:'', long:'' },                        // localidad, ciudad
+                administrative_area_level_2: { set: false, short:'', long:'' },     // zona/comuna/partido 
+                administrative_area_level_1: { set: false, short:'', long:'' },     // estado/provincia 
+                country: { set: false, short:'', long:'' },                         // pais
+                postal_code: { set: false, short:'', long:'' },                     // codigo postal
+                postal_code_suffix: { set: false, short:'', long:'' },              // codigo postal - sufijo
+            }            
+        };
         this.placesService = new google.maps.places.PlacesService(this.map);
         this.placesService.getDetails(request, callback);
         function callback(place, status) {
@@ -50,18 +67,27 @@ export class PageGmapAutocomplete implements OnInit {
                 // set place in map
                 self.map.setCenter(place.geometry.location);
                 self.createMapMarker(place);
-                
+                // set full address
+                details.address = place.formatted_address;
+                details.lat = place.geometry.location.lat();
+                details.lng = place.geometry.location.lng();
+                for (var i = 0; i < place.address_components.length; i++) {
+                    let addressType = place.address_components[i].types[0];
+                    let values = {
+                        short_name: place.address_components[i]['short_name'],
+                        long_name: place.address_components[i]['long_name']
+                    }
+                    console.log(addressType, ' values :', values);  
+                    if(details.components[addressType]) {
+                        details.components[addressType].set = true;
+                        details.components[addressType].short = place.address_components[i]['short_name'];
+                        details.components[addressType].long = place.address_components[i]['long_name'];
+                    }                                     
+                }    
+                console.log(' details :', details);                
+
                 // populate 
-                self.placedetails = {
-                    fulladdress: place.formatted_address,
-                    streetnumber: place.address_components[0].short_name,
-                    streetname: place.address_components[1].long_name,
-                    area: place.address_components[2].short_name,
-                    locality: place.address_components[3].short_name,
-                    latitud: place.geometry.location.lat(),
-                    longitud: place.geometry.location.lng(),
-                    postalcode: place.address_components[7] ? place.address_components[7].short_name : 'n/d',
-                }
+                self.placedetails = details;
                 console.log('page > getPlaceDetail > details > ', self.placedetails);
             }else{
                 console.log('page > getPlaceDetail > status > ', status);
@@ -74,7 +100,10 @@ export class PageGmapAutocomplete implements OnInit {
         let divMap = (<HTMLInputElement>document.getElementById('map'));
         this.map = new google.maps.Map(divMap, {
             center: point,
-            zoom: 15
+            zoom: 15,
+            disableDefaultUI: true,
+            draggable: false,
+            zoomControl: true
         });
     }
 
