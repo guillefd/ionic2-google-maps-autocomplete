@@ -19,14 +19,14 @@ using methods getPlacePredictions() Places Library**
   [google.maps.Marker](https://developers.google.com/maps/documentation/javascript/reference#Marker)
 
 ### Dataflow implementation
-Open the menu and tap "Autocomplete Page"
-1- a map is initiated at the top   
-2- click address input, a "Modal" page opens  
-3- In modal page:  
+Open the menu and tap "Autocomplete Page"  
+1. a map is initiated at the top   
+2. click address input, a "Modal" page opens  
+3. In modal page:  
     - start typing an address in the searchbox    
     - below the searchbox a list of addresses is autocompleted with the API predictions  
-4- tap an item of the list to choose an address, modal will close  
-5- back in the "Autocomplete Page":  
+4. tap an item of the list to choose an address, modal will close  
+5. back in the "Autocomplete Page":  
     - place_id is read from the item selected  
     - getDetails() is called to get all the address details  
     - address components are populated in the page
