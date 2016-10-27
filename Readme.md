@@ -4,7 +4,10 @@
  
 **Basic implementation of Google Maps API Autocomplete for Ionic 2  
 using methods getPlacePredictions() Places Library**
-
+  
+![image](http://g.recordit.co/kNBq2T1kd2.gif)
+  
+  
 ### Google Maps Libraries implemented
 - AutocompleteService class  
   [google.maps.places.AutocompleteService.getPlacePredictions()](https://developers.google.com/maps/documentation/javascript/reference#AutocompleteService)
