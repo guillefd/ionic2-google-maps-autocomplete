@@ -43,9 +43,9 @@ Open the menu and tap "Autocomplete Page"
 if don´t have one, [get a google maps API](https://developers.google.com/maps/documentation/javascript/get-api-key)  
 then open src/index.html  
     
-    // paste your Google API in line 27
+    // paste your Google API in line 27  
     <script src="https://maps.googleapis.com/maps/api/js?v=3&key=YOUR-API-KEY&libraries=places"></script>
-
+    
 - setup map init lat/lng
 
 the map latitude/longitude center point   
@@ -83,6 +83,7 @@ open src/pages/modal-autocomplete-items/modal-autocomplete-items.ts
     $ ionic run android
 
 ### Environment
+This implementation was tested with the following environment
 
     $ ionic info
 
@@ -98,11 +99,14 @@ open src/pages/modal-autocomplete-items/modal-autocomplete-items.ts
 
 
 
-Enjoy.
-
-
 ### Credits
 
 Based on the following posts:
 - DevFanatic by @ivanthecrazy http://devfanaticblog.com/google-maps-autocomplete-for-ionic-2-applications/
 - Ionically Speaking by @RichardShergold https://ionicallyspeaking.com/2016/06/07/google-places-autocomplete-and-ionic-2/
+
+  
+    
+Enjoy.    
+
+
