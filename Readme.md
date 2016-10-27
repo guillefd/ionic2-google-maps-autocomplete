@@ -19,7 +19,8 @@ using methods getPlacePredictions() Places Library**
   [google.maps.Marker](https://developers.google.com/maps/documentation/javascript/reference#Marker)
 
 ### Dataflow implementation
-Open the menu and tap "Autocomplete Page"  
+Open the menu and tap "Autocomplete Page"
+
 1. a map is initiated at the top   
 2. click address input, a "Modal" page opens  
 3. In modal page:  
@@ -36,13 +37,14 @@ Open the menu and tap "Autocomplete Page"
 
 ### Installation
 
-- install ionic, cordova
+- install ionic, cordova and dependencies
 
     $ npm install -g ionic cordova
+    $ npm install
 
-- setup Google Maps API
-
-open src/index.html
+- setup Google Maps API  
+if don´t have one, [get a google maps API](https://developers.google.com/maps/documentation/javascript/get-api-key)  
+then open src/index.html  
     
     // paste your Google API in line 27
     <script src="https://maps.googleapis.com/maps/api/js?v=3&key=YOUR-API-KEY&libraries=places"></script>
