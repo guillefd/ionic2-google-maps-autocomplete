@@ -8,11 +8,11 @@ using methods getPlacePredictions() Places Library**
 ### Google Maps Libraries implemented
 - AutocompleteService class  
   [google.maps.places.AutocompleteService.getPlacePredictions()](https://developers.google.com/maps/documentation/javascript/reference#AutocompleteService)
-- PlacesService class
+- PlacesService class  
   [google.maps.places.PlacesService.getDetails()](https://developers.google.com/maps/documentation/javascript/reference#PlacesService)
-- Map class  
+- Map class   
   [google.maps.Map](https://developers.google.com/maps/documentation/javascript/reference#Map)  
-- Marker class
+- Marker class  
   [google.maps.Marker](https://developers.google.com/maps/documentation/javascript/reference#Marker)
 
 ### Dataflow implementation
@@ -36,67 +36,82 @@ Open the menu and tap "Autocomplete Page"
 
 - install ionic, cordova and dependencies
 
-    $ npm install -g ionic cordova
-    $ npm install
+```
+$ npm install -g ionic cordova
+$ npm install
+```
 
 - setup Google Maps API  
 if don´t have one, [get a google maps API](https://developers.google.com/maps/documentation/javascript/get-api-key)  
 then open src/index.html  
-    
-    // paste your Google API in line 27  
-    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=YOUR-API-KEY&libraries=places"></script>
+
+```javascript
+// paste your Google API in line 27  
+...
+<script src="https://maps.googleapis.com/maps/api/js?v=3&key=YOUR-API-KEY&libraries=places"></script>
+...
+```
     
 - setup map init lat/lng
 
 the map latitude/longitude center point   
 open src/pages/page-gmap-autocomplete/page-gmap-autocomplete.ts
 
-    // change lat/ln (line 98)
-    ...
-    private initMap() {
-        var point = {lat: -34.603684, lng: -58.381559}; // actual: Buenos Aires
-    ...     
+```javascript
+// change lat/ln (line 98)
+...
+private initMap() {
+  var point = {lat: -34.603684, lng: -58.381559}; // actual: Buenos Aires
+...     
+```
 
 - setup country restrictions
 
 this will restrict the api search to the country selected  
 open src/pages/modal-autocomplete-items/modal-autocomplete-items.ts
 
-    // change country code to one of your choice (line 47)
-    ...
-    let config = { 
-        types:  ['geocode'],
-        input: this.autocomplete.query, 
-        componentRestrictions: { country: 'AR' }  // actual: Argentina 
-    }
-    ...
+```javascript
+// change country code to one of your choice (line 47)
+...
+let config = { 
+  types:  ['geocode'],
+    input: this.autocomplete.query, 
+    componentRestrictions: { country: 'AR' }  // actual: Argentina 
+  }
+...
+```
     
 
 ### Test
 
 - web browser
 
-    $ ionic serve
+```
+$ ionic serve
+```
 
 - android
 
-    $ ionic run android
+```
+$ ionic run android
+```
 
 ### Environment
 This implementation was tested with the following environment
 
-    $ ionic info
+```
+$ ionic info
 
-    Cordova CLI: 6.4.0                                                                                                                                        
-    Gulp version:  CLI version 3.9.1                                                                                                                          
-    Gulp local:                                                                                                                                               
-    Ionic Framework Version: 2.0.0-rc.1                                                                                                                       
-    Ionic CLI Version: 2.1.4                                                                                                                                  
-    Ionic App Lib Version: 2.1.2                                                                                                                              
-    Ionic App Scripts Version: 0.0.36                                                                                                                         
-    OS:                                                                                                                                                       
-    Node Version: v4.2.2 
-
+Cordova CLI: 6.4.0                                                                                                                                        
+Gulp version:  CLI version 3.9.1                                                                                                                          
+Gulp local:                                                                                                                                               
+Ionic Framework Version: 2.0.0-rc.1                                                                                                                       
+Ionic CLI Version: 2.1.4                                                                                                                                  
+Ionic App Lib Version: 2.1.2                                                                                                                              
+Ionic App Scripts Version: 0.0.36                                                                                                                         
+OS:                                                                                                                                                       
+Node Version: v4.2.2 
+```
 
 
 ### Credits
@@ -108,5 +123,4 @@ Based on the following posts:
   
     
 Enjoy.    
-
 
