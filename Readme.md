@@ -1,10 +1,7 @@
 
 # Google Maps Places Autocomplete for Ionic 2 
 -----
-
-Based on DevFanatic blog post by @ivanthecrazy 
-http://devfanaticblog.com/google-maps-autocomplete-for-ionic-2-applications/
-  
+ 
 **Basic implementation of Google Maps API Autocomplete for Ionic 2  
 using methods getPlacePredictions() Places Library**
 
@@ -102,3 +99,10 @@ open src/pages/modal-autocomplete-items/modal-autocomplete-items.ts
 
 
 Enjoy.
+
+
+### Credits
+
+Based on the following posts:
+- DevFanatic by @ivanthecrazy http://devfanaticblog.com/google-maps-autocomplete-for-ionic-2-applications/
+- Ionically Speaking by @RichardShergold https://ionicallyspeaking.com/2016/06/07/google-places-autocomplete-and-ionic-2/
