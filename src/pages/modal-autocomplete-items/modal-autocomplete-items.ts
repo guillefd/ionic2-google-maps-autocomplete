@@ -18,8 +18,7 @@ export class ModalAutocompleteItems implements OnInit{
     }
 
     ngOnInit() {
-        this.acService = new google.maps.places.AutocompleteService();
-        //this.placesService = new google.maps.places.PlacesService();        
+        this.acService = new google.maps.places.AutocompleteService();        
         this.autocompleteItems = [];
         this.autocomplete = {
             query: ''

@@ -15,22 +15,22 @@
                 [(ngModel)]="address.place">
             </ion-input>
         </ion-item>
-        <ion-item *ngIf="placedetails">
+        <ion-item *ngIf="address.set==true">
             <ion-icon name="pin" item-left></ion-icon>
             <h3>Full text address</h3>
-            <p>{{ placedetails?.address }}</p>
+            <p>{{ placedetails.address }}</p>
             <h3>Street name</h3>
-            <p>{{ placedetails?.components.route.long }}</p>
+            <p>{{ placedetails.components.route.long }}</p>
             <h3>Street number</h3>
-            <p>{{ placedetails?.components.street_number.long }}</p>
+            <p>{{ placedetails.components.street_number.long }}</p>
             <h3>Neighbourhood</h3>
-            <p>{{ placedetails?.components.sublocality_level_1.long }}</p>
+            <p>{{ placedetails.components.sublocality_level_1.long }}</p>
             <h3>Postal Code</h3>
-            <p>{{ placedetails?.components.postal_code.long }}{{ placedetails?.components.postal_code_suffix.long }}</p>    
+            <p>{{ placedetails.components.postal_code.long }}{{ placedetails.components.postal_code_suffix.long }}</p>    
             <h3>City</h3>
-            <p>{{ placedetails?.components.locality.long }}</p>     
+            <p>{{ placedetails.components.locality.long }}</p>     
             <h3>Location geometry</h3>
-            <p>{{ placedetails?.lat }}, {{ placedetails?.lng }}</p>                                           
+            <p>{{ placedetails.lat }}, {{ placedetails.lng }}</p>                                           
         </ion-item>
     </ion-list>
 </ion-content>
