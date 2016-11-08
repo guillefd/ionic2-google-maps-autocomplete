@@ -1,4 +1,3 @@
-import { VIEW_ENCAPSULATION_VALUES } from '@angular/core/src/metadata/view';
 import { Component, OnInit } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { ModalAutocompleteItems } from '../modal-autocomplete-items/modal-autocomplete-items';

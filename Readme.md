@@ -116,6 +116,17 @@ OS:
 Node Version: v4.2.2 
 ```
 
+### CHANGELOG
+
+- *2016/11/07*
+    Update to Ionic 2 RC2
+    update Ionic App Scripts to 0.0.41
+
+- *2016/10/25*
+    first commit, basic implementation
+    Ionic 2 RC1
+    Ionic App Scripts 0.0.36
+
 
 ### Credits
 
