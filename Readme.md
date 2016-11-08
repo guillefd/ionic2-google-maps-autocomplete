@@ -105,24 +105,24 @@ This implementation was tested with the following environment
 ```
 $ ionic info
 
-Cordova CLI: 6.4.0                                                                                                                                        
-Gulp version:  CLI version 3.9.1                                                                                                                          
-Gulp local:                                                                                                                                               
-Ionic Framework Version: 2.0.0-rc.1                                                                                                                       
-Ionic CLI Version: 2.1.4                                                                                                                                  
-Ionic App Lib Version: 2.1.2                                                                                                                              
-Ionic App Scripts Version: 0.0.36                                                                                                                         
-OS:                                                                                                                                                       
-Node Version: v4.2.2 
+Cordova CLI: 6.4.0
+Gulp version:  CLI version 3.9.1
+Gulp local:
+Ionic Framework Version: 2.0.0-rc.2
+Ionic CLI Version: 2.1.4
+Ionic App Lib Version: 2.1.2
+Ionic App Scripts Version: 0.0.41
+OS: Windows 10
+Node Version: v4.2.2
 ```
 
 ### CHANGELOG
 
-- *2016/11/07*
+- *2016/11/07*  
     Update to Ionic 2 RC2
     update Ionic App Scripts to 0.0.41
 
-- *2016/10/25*
+- *2016/10/25*  
     first commit, basic implementation
     Ionic 2 RC1
     Ionic App Scripts 0.0.36
