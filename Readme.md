@@ -121,13 +121,13 @@ Xcode version: Not installed
 
 - *2016/11/17*
     package.json update
-        Update Ionic to RC3 > ```"ionic-angular": "2.0.0-rc.3"```
-        Update Ionic App Scripts > ```"@ionic/app-scripts": "^0.0.45"```
-        Update zone.js > ```"zone.js": "0.6.26"```
+        Update Ionic to RC3 > ```"ionic-angular": "2.0.0-rc.3"```  
+        Update Ionic App Scripts > ```"@ionic/app-scripts": "^0.0.45"```  
+        Update zone.js > ```"zone.js": "0.6.26"```  
 
 - *2016/11/07*  
-    package.json update
-        Update to Ionic 2 RC2
+    package.json update  
+        Update to Ionic 2 RC2  
         Update Ionic App Scripts to 0.0.41
 
 - *2016/10/25*  
