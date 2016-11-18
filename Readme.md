@@ -106,21 +106,29 @@ This implementation was tested with the following environment
 $ ionic info
 
 Cordova CLI: 6.4.0
-Gulp version:  CLI version 3.9.1
-Gulp local:
-Ionic Framework Version: 2.0.0-rc.2
-Ionic CLI Version: 2.1.4
-Ionic App Lib Version: 2.1.2
-Ionic App Scripts Version: 0.0.41
+Ionic Framework Version: 2.0.0-rc.3
+Ionic CLI Version: 2.1.7
+Ionic App Lib Version: 2.1.4
+Ionic App Scripts Version: 0.0.45
+ios-deploy version: Not installed
+ios-sim version: Not installed
 OS: Windows 10
 Node Version: v4.2.2
+Xcode version: Not installed
 ```
 
 ### CHANGELOG
 
+- *2016/11/17*
+    package.json update
+        Update Ionic to RC3 > ```"ionic-angular": "2.0.0-rc.3"```
+        Update Ionic App Scripts > ```"@ionic/app-scripts": "^0.0.45"```
+        Update zone.js > ```"zone.js": "0.6.26"```
+
 - *2016/11/07*  
-    Update to Ionic 2 RC2
-    update Ionic App Scripts to 0.0.41
+    package.json update
+        Update to Ionic 2 RC2
+        Update Ionic App Scripts to 0.0.41
 
 - *2016/10/25*  
     first commit, basic implementation
