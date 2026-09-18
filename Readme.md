@@ -1,4 +1,3 @@
-
 # Google Maps Places Autocomplete for Ionic 2 
 -----
  
@@ -61,7 +60,7 @@ the map latitude/longitude center point
 open src/pages/page-gmap-autocomplete/page-gmap-autocomplete.ts
 
 ```javascript
-// change lat/ln (line 98)
+// change lat/ln (line 92)
 ...
 private initMap() {
   var point = {lat: -34.603684, lng: -58.381559}; // actual: Buenos Aires
@@ -144,5 +143,4 @@ Based on the following posts:
 
   
     
-Enjoy.    
-
+Enjoy.
